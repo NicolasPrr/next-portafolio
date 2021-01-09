@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { LinkedinOutlined, createFromIconfontCN, PhoneOutlined, GithubOutlined } from "@ant-design/icons";
 import DynamicTags from './DynamicTag'
 import { Idiom, Coding } from './Icons'
+import Link from 'next/link'
 
 import { Card } from './index'
 
@@ -48,9 +49,10 @@ const AvatarContent = () => (
                 size={125}
                 alt={data.name}
             />
-            <Typography.Title level={5}>
+            <h1>
+
                 {data.name}
-            </Typography.Title>
+            </h1>
             <Space direction='vertical' align='start'  >
                 <Typography.Text>
                     <Certificate />{data.cerificate}
@@ -61,17 +63,22 @@ const AvatarContent = () => (
                 <Typography.Text>
                     <PhoneOutlined style={{ fontSize: 20 }} /> {data.phone}
                 </Typography.Text>
-                <Typography.Link href={data.repository} target='_blank' >
-                    <GithubOutlined style={{ fontSize: 20 }} /> Perfil GitHub
+                <Link href={data.repository}>
+                    <Typography.Link href={data.repository} target='_blank' >
+                        <GithubOutlined style={{ fontSize: 20 }} /> Perfil GitHub
+                    </Typography.Link>
+                </Link>
+                <Link href={data.linkedin}>
+
+                    <Typography.Link href={data.linkedin} target='_blank' >
+                        <LinkedinOutlined style={{ fontSize: 20 }} /> Linkedin
             </Typography.Link>
-                <Typography.Link href={data.linkedin} target='_blank' >
-                    <LinkedinOutlined style={{ fontSize: 20 }} /> Linkedin
-            </Typography.Link>
+                </Link>
 
             </Space>
             <Divider dashed style={{ fontSize: '11px' }} > <Coding /> Lenguajes</Divider>
             <Row>
-                <DynamicTags data={languageList}  type='language' />
+                <DynamicTags data={languageList} type='language' />
             </Row>
             <Divider dashed style={{ fontSize: '11px' }} > <Idiom /> Idiomas</Divider>
             <Row>

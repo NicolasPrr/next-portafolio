@@ -40,19 +40,18 @@ const ProjectList = () => {
                                                     height={'100%'}
                                                     src={item.src[keyInt]}
                                                     alt={item.title}
-                                                />
+                                                    />
                                             </ItemImage>
                                             }
                                         </React.Fragment>
                                         )
-
-
+                                        
+                                        
                                     })}
                                 </Container>}
                             </>
-
-                        }
-                    >
+                            }
+                            >
 
                         <List.Item.Meta description={item.dates} key={item.title} title={item.title} />
                         {item.description}
@@ -69,6 +68,7 @@ const ProjectList = () => {
                                             // width={'100%'}
                                             height={'100%'}
                                             src={item.src[keyInt]}
+                                            alt={item.title}
                                         />
                                     </ItemImage>
                                     }

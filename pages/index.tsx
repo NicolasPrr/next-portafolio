@@ -16,9 +16,10 @@ const App = () => {
     <>
     <Head>
       <title>Nicolas Parra</title>
+      <meta charSet="utf-8" />     
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />    
       <meta name="description" content="Ingeniero de sistemas y computación egresado de la Universidad Nacional de Colombia (Bogotá)" />    
-      
+      <meta name="keywords" content="React, javascript, typescript, ruby, rails, Universidad Nacional de Colombia, Ingenieria, docker" />    
       </Head>
     <Layout>
       <Header style={{ background: '#fff', boxShadow: '3px 3px 5px 6px #ccc', height: 35 }} />
